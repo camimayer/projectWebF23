@@ -2,38 +2,249 @@
 <html>
   <head>
     <title>Store</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="edition.css" />
   </head>
-  <body> 
+  <body>
     <header>
-        <h1>Magasin de vin</h1>
-        <section>
-            
-            <div>
-                <a href="home.html">HOME</a>
-                <a href="store.html">STORE</a>
-                <a href="payment.html">PAYMENT</a>
-                <a href="contactus.html">CONTACT US</a>
-            </div>
-            <div>
-                <button>
-                    <img src="./img/carrinho.png" alt="error">
-                </button>
-            </div>
-        </section>
+      <h1>Magasin de Vin</h1>
+      <section class="nav-bar">
+        <div class="nav-bar-links">
+          <a href="home.html">HOME</a>
+          <a href="store.html">STORE</a>
+          <a href="payment.html">PAYMENT</a>
+          <a href="contactus.html">CONTACT US</a>
+        </div>
+        <div>
+          <button>
+            <img src="./img/carrinho.png" alt="error" class="chart-image" />
+            <p id="total-price"></p>
+          </button>
+        </div>
+      </section>
     </header>
+
+    <section class="products" id="products">
+      <div class="product-line">
+        <div class="product">
+          <img src="./img/vin_blanc.webp" class="product-img" />
+          <p id="name0">Vin blanc 1</p>
+          <p>description</p>
+          <p id="price0">15.26$</p>
+          <select name="qty0">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-0" value="Add Cart">
+        </div>
+
+        <div class="product">
+          <img src="./img/vin_blanc2.webp" class="product-img" />
+          <p id="name1">Vin blanc 2 </p>
+          <p>description</p>
+          <p id="price1">15.26$</p>
+          <select name="qty1">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-1" value="Add Cart">
+        </div>
+
+        <div class="product">
+          <img src="./img/vin_blanc3.webp" class="product-img" />
+          <p id="name2">Vin blanc 3</p>
+          <p>description</p>
+          <p id="price2">15.26$</p>
+          <select name="qty2">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-2" value="Add Cart">
+        </div>
+
+        <div class="product">
+          <img src="./img/vin_blanc4.webp" class="product-img" />
+          <p id="name3">Vin blanc 4</p>
+          <p>description</p>
+          <p id="price3">15.26$</p>
+          <select name="qty3">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-3" value="Add Cart">
+        </div>
+      </div>
+
+      <div class="product-line">
+        <div class="product">
+          <img src="./img/vin_rose.webp" class="product-img" />
+          <p id="name4">Vin rose 1</p>
+          <p>description</p>
+          <p id="price4">15.26$</p>
+          <select name="qty4">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-4" value="Add Cart">
+        </div>
+
+        <div class="product">
+          <img src="./img/vin_rose2.webp" class="product-img" />
+          <p id="name5">Vin rose 2</p>
+          <p>description</p>
+          <p id="price5">15.26$</p>
+          <select name="qty5">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-5" value="Add Cart">
+        </div>
+
+        <div class="product">
+          <img src="./img/vin_rose3.webp" class="product-img" />
+          <p id="name6">Vin rose 3</p>
+          <p>description</p>
+          <p id="price6">15.26$</p>
+          <select name="qty6">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-6" value="Add Cart">
+        </div>
+
+        <div class="product">
+          <img src="./img/vin_rose4.webp" class="product-img" />
+          <p id="name7">Vin rose 4</p>
+          <p>description</p>
+          <p id="price7">15.26$</p>
+          <select name="qty7">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-7" value="Add Cart">
+        </div>
+      </div>
+
+      <div class="product-line">
+        <div class="product">
+          <img src="./img/vin_rouge.webp" class="product-img" />
+          <p id="name8">Vin rouge 1</p>
+          <p>description</p>
+          <p id="price8">15.26$</p>
+          <select name="qty8">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-8" value="Add Cart">
+        </div>
+
+        <div class="product">
+          <img src="./img/vin_rouge2.webp" class="product-img" />
+          <p id="name9">Vin rouge 2</p>
+          <p>description</p>
+          <p id="price9">15.26$</p>
+          <select name="qty9">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-9" value="Add Cart">
+        </div>
+
+        <div class="product">
+          <img src="./img/vin_rouge3.webp" class="product-img" />
+          <p id="name10">Vin rouge 3</p>
+          <p>description</p>
+          <p id="price10">15.26$</p>
+          <select name="qty10">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-10" value="Add Cart">
+        </div>
+
+        <div class="product">
+          <img src="./img/vin_rouge4.webp" class="product-img" />
+          <p id="name11">Vin rouge 4</p>
+          <p>description</p>
+          <p id="price11">15.26$</p>
+          <select name="qty11">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input type="button" name="product-11" value="Add Cart">
+        </div>
+      </div>
+    </section>
     <footer>
-      <p>© magasin de vin</p>
-  
-      <liens>
+      <p>© magasin de Vin</p>
+
+      <liens class="footer-links">
         <a href="home.html">HOME</a>
         <a href="store.html">STORE</a>
         <a href="payment.html">PAYMENT</a>
         <a href="contactus.html">CONTACT US</a>
       </liens>
     </footer>
-
-
   </body>
+  <script type="text/javascript" src="main.js"></script>
 </html>
-

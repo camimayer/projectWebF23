@@ -1,1 +1,115 @@
+header {
+    flex-direction: row; 
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(246, 131, 131);
+    padding: 13px;
+    opacity: 65%;
+}
+.chart-image {
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+}
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    float: right;
+    align-items: center;
+
+}
+.nav-bar-links {
+    display: flex;
+    flex-direction : row;
+    gap: 20px;
+    text-decoration: none;
+}
+.nav-bar-links a {
+    text-decoration: none;
+}
+.body-home {
+    background: url("img/adega-de-vinhos.webp");
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+
+    
+}
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+.text-home {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 83%;
+    justify-content: center;
+    gap: 10%;
+}
+.text-home p {
+    width: 70%;
+    align-self: center;
+    color: aliceblue;
+    font-size: 29px;
+}
+.button-home {
+    height: 47px;
+    width: 166px;
+    border-radius: 16px;
+    cursor: pointer;
+    color: rgb(127, 120, 120);
+    background-color: rgb(246, 214, 214);
+    border-style: none;
+    
+}
+.product-img {
+    width:200px;
+    height: 300px;
+}
+.product {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.product p {
+    margin: 0;
+    
+}
+
+.product-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.products{
+    margin-bottom: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(246, 131, 131);
+    
+    width: 100%;
+    opacity: 65%;
+}
+.footer-links {
+    gap: 20px;
+    text-decoration: none;
+}
+.footer-links a {
+    text-decoration: none;
+}
+
+
+    
 
