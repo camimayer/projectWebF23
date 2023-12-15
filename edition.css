@@ -6,6 +6,7 @@ header {
     padding: 13px;
     opacity: 65%;
 }
+
 .chart-image {
     width: 30px; 
     height: 30px;
@@ -27,7 +28,17 @@ header {
 }
 .nav-bar-links a {
     text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    padding: 3px;
+    font-weight: bolder;
 }
+
+.nav-bar-links a:hover {
+    background-color:  rgb(215, 215, 228);
+    color: rgb(248, 8, 8);
+  }
+
 .body-home {
     background: url("img/adega-de-vinhos.webp");
     background-repeat: no-repeat;
@@ -93,22 +104,80 @@ body {
     margin-bottom: 10px;
 }
 
+.body-contact-us{
+    flex-direction: column; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.ContactUs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    color: rgb(135, 131, 131);
+    margin-top: 95px;
+    margin-bottom: 95px;
+    font-size: 20px;
+  }
+  .ContactUs div h3 {
+    font-size: 30px;
+  }
+
+  .ContactUs div p a {
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 3px;
+  }
+  
+  .ContactUs div p a:hover {
+    color: white;
+    background-color:  rgb(215, 215, 228);
+    border: 1px solid rgb(215, 215, 228);
+  }
+  
+  .ContactUs div iframe {
+    width: 660px;
+    height: 330px;
+    border: 0;
+    margin: auto;
+  }
+
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     background-color: rgb(246, 131, 131);
-    
+    align-items: center;
     width: 100%;
     opacity: 65%;
 }
+
+footer p {
+    margin-left: 15px; 
+}
+
 .footer-links {
+    display: flex;
+    flex-direction : row;
     gap: 20px;
     text-decoration: none;
+    margin-right: 15px; 
 }
 .footer-links a {
     text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    padding: 3px;
+    font-weight: bolder;
 }
+
+.footer-links a:hover {
+    background-color:  rgb(215, 215, 228);
+    color: rgb(248, 8, 8);
+  }
 
 
     
