@@ -1,3 +1,10 @@
+:root {
+    --white: #fff;
+    --red: rgb(255, 0, 0);
+    --gray:#959595;
+    --blue: #56c5db;
+}
+
 header {
     flex-direction: row; 
     display: flex;
@@ -127,13 +134,13 @@ body {
 
   .ContactUs div p a {
     text-decoration: none;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     border-radius: 5px;
     padding: 3px;
   }
   
   .ContactUs div p a:hover {
-    color: white;
+    color: var(--white);
     background-color:  rgb(215, 215, 228);
     border: 1px solid rgb(215, 215, 228);
   }
@@ -179,6 +186,112 @@ footer p {
     color: rgb(248, 8, 8);
   }
 
+/* P A N I E R */
 
-    
+.container {
+    padding: 0 30px;
+    margin: 0 auto;
+}
 
+.section-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+  .cart-table {
+    margin: 0 auto;
+    width: 60%;
+    border-collapse: collapse;
+  }
+
+  .table-head-item {
+    text-align: start;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 6px;
+    text-transform: uppercase;
+
+  }
+
+   .second-col,
+   .third-col {
+    width: 15%;
+   } 
+
+.cart-product td {
+    padding: 8px 0;
+}
+
+.product-identification {
+    display: flex;
+    align-items: center;
+}
+
+.cart-product-image {
+    width: 40px;
+    height: 60px;
+}
+
+.cart-product-title{
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+.cart-product-price {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.product-qtd-input {
+    width: 48px;
+    height: 34px;
+    border-radius: 6px;
+    border: 2px solid var(--blue);
+    text-align: center;
+    background-color: #eee;
+}
+
+.remove-product-button {
+    margin-left: 12px;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 10px 8px;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove-product-button:hover {
+    filter: brightness(0.8)
+}
+
+.cart-total-container {
+    border-top: 1px solid var(--gray);
+    text-align: end;
+    padding: 6px 16px 0 0;
+    font-size: 18px;
+}
+
+.cart-total-container strong {
+    margin-right: 12px;
+}
+
+.purchase-button {
+    display: flex;
+    margin: 24px auto 0;
+    background-color: var(--blue);
+    color: var(--white);
+    border: 0;
+    border-radius: 6px;
+    padding: 16px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.purchase-button:hover{
+    filter: brightness(0.8)
+}
