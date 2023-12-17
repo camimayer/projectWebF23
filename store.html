@@ -16,7 +16,7 @@
           <a href="contactus.html">CONTACTEZ-NOUS</a>
         </div>
         <div>
-          <button>
+          <button id="btn-pay">
             <img src="./img/carrinho.png" alt="error" class="chart-image" />
             <p id="total-price"></p>
           </button>
@@ -24,10 +24,42 @@
       </section>
     </header>
 
+    <div id="myModalPayment" class="modalPayment">
+      <div class="modalPayment-content">
+        <table class="cart-table">
+          <theader>
+            <tr>
+              <th class="table-head-item first-col">Article</th>
+              <th class="table-head-item second-col">Prix</th>
+              <th class="table-head-item third-col">Quantité</th>
+            </tr>
+          </theader>
+  
+          <tbody id="body-modal">
+          </tbody>
+  
+          <tfooter>
+            <tr>
+              <td colspan="3" class="cart-total-container">
+                <strong>GST 9.975%:</strong>
+                <span id="price-gst"></span>
+                <br>
+                <strong>QST 5%:</strong>
+                <span id="price-qst"></span>
+                <br><br>
+                <strong>TOTAL</strong>
+                <span id="total-price-modal"></span>
+              </td>
+            </tr>
+          </tfooter>
+        </table>
+      </div>
+   </div>
+
     <section class="products" id="products">
       <div class="product-line">
         <div class="product">
-          <img src="./img/vin_blanc.webp" class="product-img" />
+          <img src="./img/vin_blanc.webp" class="product-img" id="img0"/>
           <p id="name0">Vin blanc 1</p>
           <p>description</p>
           <p id="price0">15.26$</p>
@@ -44,7 +76,7 @@
         </div>
 
         <div class="product">
-          <img src="./img/vin_blanc2.webp" class="product-img" />
+          <img src="./img/vin_blanc2.webp" class="product-img" id="img1"/>
           <p id="name1">Vin blanc 2 </p>
           <p>description</p>
           <p id="price1">15.26$</p>
@@ -61,7 +93,7 @@
         </div>
 
         <div class="product">
-          <img src="./img/vin_blanc3.webp" class="product-img" />
+          <img src="./img/vin_blanc3.webp" class="product-img" id="img2"/>
           <p id="name2">Vin blanc 3</p>
           <p>description</p>
           <p id="price2">15.26$</p>
@@ -78,7 +110,7 @@
         </div>
 
         <div class="product">
-          <img src="./img/vin_blanc4.webp" class="product-img" />
+          <img src="./img/vin_blanc4.webp" class="product-img" id="img3"/>
           <p id="name3">Vin blanc 4</p>
           <p>description</p>
           <p id="price3">15.26$</p>
@@ -97,7 +129,7 @@
 
       <div class="product-line">
         <div class="product">
-          <img src="./img/vin_rose.webp" class="product-img" />
+          <img src="./img/vin_rose.webp" class="product-img" id="img4"/>
           <p id="name4">Vin rose 1</p>
           <p>description</p>
           <p id="price4">15.26$</p>
@@ -114,7 +146,7 @@
         </div>
 
         <div class="product">
-          <img src="./img/vin_rose2.webp" class="product-img" />
+          <img src="./img/vin_rose2.webp" class="product-img" id="img5"/>
           <p id="name5">Vin rose 2</p>
           <p>description</p>
           <p id="price5">15.26$</p>
@@ -131,7 +163,7 @@
         </div>
 
         <div class="product">
-          <img src="./img/vin_rose3.webp" class="product-img" />
+          <img src="./img/vin_rose3.webp" class="product-img" id="img6"/>
           <p id="name6">Vin rose 3</p>
           <p>description</p>
           <p id="price6">15.26$</p>
@@ -148,7 +180,7 @@
         </div>
 
         <div class="product">
-          <img src="./img/vin_rose4.webp" class="product-img" />
+          <img src="./img/vin_rose4.webp" class="product-img" id="img7"/>
           <p id="name7">Vin rose 4</p>
           <p>description</p>
           <p id="price7">15.26$</p>
@@ -167,7 +199,7 @@
 
       <div class="product-line">
         <div class="product">
-          <img src="./img/vin_rouge.webp" class="product-img" />
+          <img src="./img/vin_rouge.webp" class="product-img" id="img8"/>
           <p id="name8">Vin rouge 1</p>
           <p>description</p>
           <p id="price8">15.26$</p>
@@ -184,7 +216,7 @@
         </div>
 
         <div class="product">
-          <img src="./img/vin_rouge2.webp" class="product-img" />
+          <img src="./img/vin_rouge2.webp" class="product-img" id="img9"/>
           <p id="name9">Vin rouge 2</p>
           <p>description</p>
           <p id="price9">15.26$</p>
@@ -201,7 +233,7 @@
         </div>
 
         <div class="product">
-          <img src="./img/vin_rouge3.webp" class="product-img" />
+          <img src="./img/vin_rouge3.webp" class="product-img" id="img10"/>
           <p id="name10">Vin rouge 3</p>
           <p>description</p>
           <p id="price10">15.26$</p>
@@ -218,7 +250,7 @@
         </div>
 
         <div class="product">
-          <img src="./img/vin_rouge4.webp" class="product-img" />
+          <img src="./img/vin_rouge4.webp" class="product-img" id="img11"/>
           <p id="name11">Vin rouge 4</p>
           <p>description</p>
           <p id="price11">15.26$</p>
