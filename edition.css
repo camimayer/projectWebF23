@@ -317,3 +317,23 @@ footer p {
     width: 80%; 
     border-radius: 20px;
   }
+
+.form-payment{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+		
+}
+
+.form-payment span{
+	display: none;
+	
+}
+
+#tableGeneral{
+    width: 100%;
+}
+
+#tableGeneral table{
+    width: 100%;
+}

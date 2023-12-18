@@ -37,12 +37,6 @@ products.addEventListener('click', (e)=>{
 var btnPay = document.getElementById("btn-pay");
 var modalPay = document.getElementById("myModalPayment");
 
-window.onclick = function(event) {
-    console.log(event.target)
-    if (event.target == modalPay) {
-        modalPay.style.display = "none";
-    }
-}
 
 btnPay.onclick = function (){
     modalPay.style.display = "block";
@@ -129,4 +123,96 @@ btnPay.onclick = function (){
     priceGstSpan.innerText = taxGst.toFixed(2) + "$";
     priceQstSpan.innerText = taxQst.toFixed(2) + "$";
     totalPriceSpan.innerText = totalPriceTax.toFixed(2) + "$";
+}
+var btnConfirmer = document.getElementById("confirmer-btn");
+var modalPay2 = document.getElementById("ModalPayment2");
+
+
+btnConfirmer.onclick = function (){
+    modalPay2.style.display = "block";
+}
+
+window.onclick = function(event) {
+    console.log(event.target)
+    if (event.target == modalPay) {
+        modalPay.style.display = "none";
+    }
+
+    if (event.target == modalPay2) {
+        modalPay2.style.display = "none";
+    }
+}
+
+var form = document.getElementById("form-payment");
+
+form.addEventListener("submit", (event)=>{
+    event.preventDefault();
+
+    var cardnumber= /^\d{16}$/
+    var cvc = /^\d{3}$/
+    var nameoncard =  /^[a-zA-Z-/ ]*$/
+    var expiration =  /^\d{2}\/\d{2}$/
+    var isFormValid = true;
+
+    var inputCardNumber = document.getElementById("cardNumber");
+    var cardNumberError = document.getElementById("card-number-error");
+    if(cardnumber.test(inputCardNumber.value)){
+        cardNumberError.style.display = "none";
+    }
+    else{
+        cardNumberError.style.display = "flex";
+        isFormValid = false;
+    }
+ 
+    var inputCvc = document.getElementById("cvc");
+    var inputCvcError = document.getElementById("cvcPara");
+    if(cvc.test(inputCvc.value)){
+        inputCvcError.style.display = "none";
+    }
+    else{
+        inputCvcError.style.display = "flex";
+        isFormValid = false;
+    }
+
+    var inputNameonCard = document.getElementById("nameoncard");
+    var nameoncardError = document.getElementById("nameoncardPara");
+    if(nameoncard.test(inputNameonCard.value)){
+        nameoncardError.style.display = "none";
+    }
+    else{
+        nameoncardError.style.display = "flex";
+        isFormValid = false;
+    }
+
+    var inputExpiration = document.getElementById("expiration");
+    var ExpirationError = document.getElementById("expirationPara");
+    if(expiration.test(inputExpiration.value)){
+        ExpirationError.style.display = "none";
+    }
+    else{
+        ExpirationError.style.display = "flex";
+        isFormValid = false;
+    }
+
+    if(isFormValid){
+        alert("Merci pour acheter!")
+        form.submit();
+    }
+   
+}); 
+
+var btnClear = document.getElementById("reset-btn");
+btnClear.onclick = function(){ 
+    var cardNumberError = document.getElementById("card-number-error");
+    cardNumberError.style.display = "none";
+
+    var inputCvcError = document.getElementById("cvcPara");
+    inputCvcError.style.display = "none";
+
+    var nameoncardError = document.getElementById("nameoncardPara");
+    nameoncardError.style.display = "none";
+
+    var ExpirationError = document.getElementById("expirationPara");
+    ExpirationError.style.display = "none";
+
 }
