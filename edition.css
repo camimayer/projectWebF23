@@ -280,7 +280,7 @@ footer p {
 
 .purchase-button {
     display: flex;
-    margin: 24px auto 0;
+    margin: 24px auto 50px;
     background-color: var(--blue);
     color: var(--white);
     border: 0;
