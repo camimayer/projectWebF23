@@ -337,3 +337,13 @@ footer p {
 #tableGeneral table{
     width: 100%;
 }
+
+.facture-elements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.merci{ 
+    text-align: center;
+
+}

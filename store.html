@@ -4,7 +4,12 @@
     <title>Store</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="edition.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
@@ -16,7 +21,7 @@
           <a href="contactus.html">CONTACTEZ-NOUS</a>
         </div>
         <div>
-          <button id="btn-pay">
+          <button id="btn-cart">
             <img src="./img/carrinho.png" alt="error" class="chart-image" />
             <p id="total-price"></p>
           </button>
@@ -34,23 +39,28 @@
               <th class="table-head-item third-col">Quantité</th>
             </tr>
           </theader>
-  
-          <tbody id="body-modal">
-          </tbody>
-  
+
+          <tbody id="body-modal"></tbody>
+
           <tfooter>
             <tr>
               <td colspan="3" class="cart-total-container">
                 <strong>GST 9.975%:</strong>
                 <span id="price-gst"></span>
-                <br>
+                <br />
                 <strong>QST 5%:</strong>
                 <span id="price-qst"></span>
-                <br><br>
+                <br /><br />
                 <strong>TOTAL</strong>
                 <span id="total-price-modal"></span>
-                <br>
-                <button class="purchase-button" type="button" id="confirmer-btn">Confirmer l'achat</button>
+                <br />
+                <button
+                  class="purchase-button"
+                  type="button"
+                  id="confirmer-btn"
+                >
+                  Confirmer l'achat
+                </button>
               </td>
             </tr>
           </tfooter>
@@ -58,134 +68,234 @@
       </div>
     </div>
     <div id="ModalPayment2" class="modalPayment">
-
       <div class="modalPayment-content">
-       <span class="closePayment">&times;</span>
-       <form class="form-payment" id="form-payment">
-         <table id="tableGeneral">
-           
-           <tr>
-             <th>
-               <table>
-                 <tr>
-                   <th colspan="2">
-                      <h2> Credit Card Info.</h2>
-                   </th>
-                   
-                 </tr>
-                 <tr>
-                   <th>
-                       
-                     <input class="form-control" id = "cardNumber" name ="cardnumber" placeholder="*Card Number" required>
-                     <span id="card-number-error" class="text-danger">Il faut ecrir un numero avec 16 chiffres.</span>
+        <span class="closePayment">&times;</span>
+        <form class="form-payment" id="form-payment">
+          <table id="tableGeneral">
+            <tr>
+              <th>
+                <table>
+                  <tr>
+                    <th colspan="2">
+                      <h2>Credit Card Info.</h2>
                     </th>
-                   
-                 </tr>
-                 <tr>
-                   <th>
-                      <input class="form-control" id="cvc" name ="cvc" placeholder="*CVC" required>
-                      <span id="cvcPara" class="text-danger">CVC doit avoir 3 caractères.</span>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input
+                        class="form-control"
+                        id="cardNumber"
+                        name="cardnumber"
+                        placeholder="*Card Number"
+                        required
+                      />
+                      <span id="card-number-error" class="text-danger"
+                        >Il faut ecrir un numero avec 16 chiffres.</span
+                      >
                     </th>
-                   
-                 </tr>
-                 
-                 <tr>
-                   <th>
-                      <input type = "text" name ="nameoncard" id="nameoncard" class="form-control" placeholder="*Name on Card" required>
-                      <span id="nameoncardPara" class="text-danger">Nom n'a pas de chiffres !</span>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input
+                        class="form-control"
+                        id="cvc"
+                        name="cvc"
+                        placeholder="*CVC"
+                        required
+                      />
+                      <span id="cvcPara" class="text-danger"
+                        >CVC doit avoir 3 caractères.</span
+                      >
                     </th>
-                 </tr>
-                 
-                 <tr>
-                   <th>
-                      <input type = "text" id ="expiration" name ="expiration" class="form-control" placeholder="*Expiration MM/YY" required>
-                      <span id="expirationPara" class="text-danger">L’expiration doit être MM/AA.</span>
-                    </th>
-                 </tr>
-                 <tr>
-                   <th>
-                      <button type="reset" class="btn btn-danger w-100 mt-3" value="Reset" id="reset-btn">Clear</button>
-                      
-                    </th>
-                 </tr>
-                 
-                 <tr>
-                   <th>
-                      <button type="submit" id ="submitButton" class="btn btn-primary w-100 mt-3" value="submit">Confirm</button>
-                    </th>
-                 </tr>
-                 
-               </table>
-             </th>
-             <th>
-               <table>
-                   <tr>
-                     <th colspan="2">
-                        <h2>Addresse</h2>
-                     </th>
-                     
-                   </tr>
-                   <tr>
-                     <th>
-                        <input type = "text" name ="shipname" placeholder="*Name" class="form-control"  required>
-                     </th>
-                     
-                   </tr>
-                   <tr>
-                     <th>
-                        <input type = "text" name ="address" placeholder="*Address" class="form-control" required>
-                        
-                      </th>
-                     
-                   </tr>
-                   <tr>
-                     <th>
-                        <input type = "text" name ="address2" placeholder="Address Line 2" class="form-control">
-                        
-                      </th>
-                     
-                   </tr>
-                   <tr>
-                     <th>
-                        <input type = "text" name ="city" placeholder="*City" class="form-control" required>
-                        
-                      </th>
-                     
-                   </tr>
-                   <tr>
-                     <th>
-                        <input type = "text" name ="postacode" placeholder="*Postal Code" class="form-control" required>
-                        
-                      </th>
-                     
-                   </tr>
-                   
-                   <tr>
-                     <th>
-                        <input type = "text" name ="province" placeholder="*Province" class="form-control" required>
-                        
-                      </th>
-                   </tr>
-                   <tr>
-                     <th>
-                        <input type = "text" name ="country" placeholder="Country" class="form-control">
-                      </th>
-                   </tr>
-                   
-                 </table>
-             </th>
-           </tr>
-         </table>
-         
-       </form>
-     </div>
+                  </tr>
 
-   </div>
+                  <tr>
+                    <th>
+                      <input
+                        type="text"
+                        name="nameoncard"
+                        id="nameoncard"
+                        class="form-control"
+                        placeholder="*Name on Card"
+                        required
+                      />
+                      <span id="nameoncardPara" class="text-danger"
+                        >Nom n'a pas de chiffres !</span
+                      >
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <input
+                        type="text"
+                        id="expiration"
+                        name="expiration"
+                        class="form-control"
+                        placeholder="*Expiration MM/YY"
+                        required
+                      />
+                      <span id="expirationPara" class="text-danger"
+                        >L’expiration doit être MM/AA.</span
+                      >
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <button
+                        type="reset"
+                        class="btn btn-danger w-100 mt-3"
+                        value="Reset"
+                        id="reset-btn"
+                      >
+                        Clear
+                      </button>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <button
+                        type="submit"
+                        id="submitButton"
+                        class="btn btn-primary w-100 mt-3"
+                        value="submit"
+                      >
+                        Confirm
+                      </button>
+                    </th>
+                  </tr>
+                </table>
+              </th>
+              <th>
+                <table>
+                  <tr>
+                    <th colspan="2">
+                      <h2>Addresse</h2>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input
+                        type="text"
+                        name="shipname"
+                        placeholder="*Name"
+                        class="form-control"
+                        required
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input
+                        type="text"
+                        name="address"
+                        placeholder="*Address"
+                        class="form-control"
+                        required
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input
+                        type="text"
+                        name="address2"
+                        placeholder="Address Line 2"
+                        class="form-control"
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input
+                        type="text"
+                        name="city"
+                        placeholder="*City"
+                        class="form-control"
+                        required
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input
+                        type="text"
+                        name="postacode"
+                        placeholder="*Postal Code"
+                        class="form-control"
+                        required
+                      />
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      <input
+                        type="text"
+                        name="province"
+                        placeholder="*Province"
+                        class="form-control"
+                        required
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input
+                        type="text"
+                        name="country"
+                        placeholder="Country"
+                        class="form-control"
+                      />
+                    </th>
+                  </tr>
+                </table>
+              </th>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+
+    <div id="modal-final" class="modalPayment">
+      <div class="modalPayment-content">
+        <h1>Facture</h1>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Produit</th>
+              <th>Quantite</th>
+              <th>Prix</th>
+              <th>Prix Total</th>
+            </tr>
+          </thead>
+
+          <tbody id="facture"></tbody>
+
+          <tfooter>
+            <tr>
+              <td colspan="4" class="cart-total-container">
+                <strong>GST 9.975%:</strong>
+                <span id="gst-final"></span>
+                <br />
+                <strong>QST 5%:</strong>
+                <span id="qst-final"></span>
+                <br/><br />
+                <strong>TOTAL</strong>
+                <span id="total-price-final"></span>
+              </td>
+            </tr>
+          </tfooter>
+        </table>
+        <p class="merci">Merci pour votre achat!</p>
+      </div>
+    </div>
 
     <section class="products" id="products">
       <div class="product-line">
         <div class="product">
-          <img src="./img/vin_blanc.webp" class="product-img" id="img0"/>
+          <img src="./img/vin_blanc.webp" class="product-img" id="img0" />
           <p id="name0">Vin blanc 1</p>
           <p>description</p>
           <p id="price0">15.26$</p>
@@ -198,12 +308,12 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-0" value="Add Cart">
+          <input type="button" name="product-0" value="Add Cart" />
         </div>
 
         <div class="product">
-          <img src="./img/vin_blanc2.webp" class="product-img" id="img1"/>
-          <p id="name1">Vin blanc 2 </p>
+          <img src="./img/vin_blanc2.webp" class="product-img" id="img1" />
+          <p id="name1">Vin blanc 2</p>
           <p>description</p>
           <p id="price1">15.26$</p>
           <select name="qty1">
@@ -215,11 +325,11 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-1" value="Add Cart">
+          <input type="button" name="product-1" value="Add Cart" />
         </div>
 
         <div class="product">
-          <img src="./img/vin_blanc3.webp" class="product-img" id="img2"/>
+          <img src="./img/vin_blanc3.webp" class="product-img" id="img2" />
           <p id="name2">Vin blanc 3</p>
           <p>description</p>
           <p id="price2">15.26$</p>
@@ -232,11 +342,11 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-2" value="Add Cart">
+          <input type="button" name="product-2" value="Add Cart" />
         </div>
 
         <div class="product">
-          <img src="./img/vin_blanc4.webp" class="product-img" id="img3"/>
+          <img src="./img/vin_blanc4.webp" class="product-img" id="img3" />
           <p id="name3">Vin blanc 4</p>
           <p>description</p>
           <p id="price3">15.26$</p>
@@ -249,13 +359,13 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-3" value="Add Cart">
+          <input type="button" name="product-3" value="Add Cart" />
         </div>
       </div>
 
       <div class="product-line">
         <div class="product">
-          <img src="./img/vin_rose.webp" class="product-img" id="img4"/>
+          <img src="./img/vin_rose.webp" class="product-img" id="img4" />
           <p id="name4">Vin rose 1</p>
           <p>description</p>
           <p id="price4">15.26$</p>
@@ -268,11 +378,11 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-4" value="Add Cart">
+          <input type="button" name="product-4" value="Add Cart" />
         </div>
 
         <div class="product">
-          <img src="./img/vin_rose2.webp" class="product-img" id="img5"/>
+          <img src="./img/vin_rose2.webp" class="product-img" id="img5" />
           <p id="name5">Vin rose 2</p>
           <p>description</p>
           <p id="price5">15.26$</p>
@@ -285,11 +395,11 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-5" value="Add Cart">
+          <input type="button" name="product-5" value="Add Cart" />
         </div>
 
         <div class="product">
-          <img src="./img/vin_rose3.webp" class="product-img" id="img6"/>
+          <img src="./img/vin_rose3.webp" class="product-img" id="img6" />
           <p id="name6">Vin rose 3</p>
           <p>description</p>
           <p id="price6">15.26$</p>
@@ -302,11 +412,11 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-6" value="Add Cart">
+          <input type="button" name="product-6" value="Add Cart" />
         </div>
 
         <div class="product">
-          <img src="./img/vin_rose4.webp" class="product-img" id="img7"/>
+          <img src="./img/vin_rose4.webp" class="product-img" id="img7" />
           <p id="name7">Vin rose 4</p>
           <p>description</p>
           <p id="price7">15.26$</p>
@@ -319,13 +429,13 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-7" value="Add Cart">
+          <input type="button" name="product-7" value="Add Cart" />
         </div>
       </div>
 
       <div class="product-line">
         <div class="product">
-          <img src="./img/vin_rouge.webp" class="product-img" id="img8"/>
+          <img src="./img/vin_rouge.webp" class="product-img" id="img8" />
           <p id="name8">Vin rouge 1</p>
           <p>description</p>
           <p id="price8">15.26$</p>
@@ -338,11 +448,11 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-8" value="Add Cart">
+          <input type="button" name="product-8" value="Add Cart" />
         </div>
 
         <div class="product">
-          <img src="./img/vin_rouge2.webp" class="product-img" id="img9"/>
+          <img src="./img/vin_rouge2.webp" class="product-img" id="img9" />
           <p id="name9">Vin rouge 2</p>
           <p>description</p>
           <p id="price9">15.26$</p>
@@ -355,11 +465,11 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-9" value="Add Cart">
+          <input type="button" name="product-9" value="Add Cart" />
         </div>
 
         <div class="product">
-          <img src="./img/vin_rouge3.webp" class="product-img" id="img10"/>
+          <img src="./img/vin_rouge3.webp" class="product-img" id="img10" />
           <p id="name10">Vin rouge 3</p>
           <p>description</p>
           <p id="price10">15.26$</p>
@@ -372,11 +482,11 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-10" value="Add Cart">
+          <input type="button" name="product-10" value="Add Cart" />
         </div>
 
         <div class="product">
-          <img src="./img/vin_rouge4.webp" class="product-img" id="img11"/>
+          <img src="./img/vin_rouge4.webp" class="product-img" id="img11" />
           <p id="name11">Vin rouge 4</p>
           <p>description</p>
           <p id="price11">15.26$</p>
@@ -389,7 +499,7 @@
             <option value="5">5</option>
             <option value="6">6</option>
           </select>
-          <input type="button" name="product-11" value="Add Cart">
+          <input type="button" name="product-11" value="Add Cart" />
         </div>
       </div>
     </section>
@@ -404,5 +514,9 @@
     </footer>
   </body>
   <script type="text/javascript" src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
 </html>
