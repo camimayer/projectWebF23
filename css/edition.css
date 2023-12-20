@@ -47,7 +47,7 @@ header {
   }
 
 .body-home {
-    background: url("img/adega-de-vinhos.webp");
+    background: url("../img/adega-de-vinhos.webp");
     background-repeat: no-repeat;
     width: 100vw;
     background-size: cover;
