@@ -25,7 +25,7 @@ products.addEventListener('click', (e)=>{  //event quand on click dans tout la <
     qty = qty.value //la variable qty va recevoir la quantite que l'utlisateur a choisi dans les options
     console.log(qty)
 
-    purchase[index] = Number(qty) // le array purchase va recevoir dans l'index la quantite selectione 
+    purchase[index] = purchase[index] + Number(qty) // le array purchase va recevoir dans l'index la quantite selectione 
 
     alert("You added $" + Number(qty) * Number(price)) //alert pour montrer au utilisateur qu'il combien de bouteilles il a ajoute avec le prix total
     
@@ -58,9 +58,8 @@ btnCart.onclick = function (){ //quand click ici ca ouvre le premier modal
             price = price.innerText.slice(0, -1)
             console.log(price)
 
-            var qty = document.getElementsByName("qty"+i)[0];
-            qty = qty.value
-            console.log(qty)
+            var qty = purchase[i]; //prendre la quantite dans l'array de purchase
+            
 
             var img = document.getElementById("img"+i); // on va afficher aussi l'image du produit
             
@@ -219,9 +218,8 @@ form.addEventListener("submit", (event)=>{ //appeler la function quand il clique
             price = price.innerText.slice(0, -1) // montrer le prix sans le dernier chiffre
             console.log(price)
 
-            var qty = document.getElementsByName("qty"+i)[0];
-            qty = qty.value
-            console.log(qty)
+            var qty = purchase[i];
+            
 
             var newTr = document.createElement("tr"); // creations du element Tr
             
