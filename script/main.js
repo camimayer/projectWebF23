@@ -21,7 +21,7 @@ products.addEventListener('click', (e)=>{  //event quand on click dans tout la <
     price = price.innerText.slice(0, -1) // la variable price va recevoir le prix jusq'au index -1 pour couper le dernier index ($)
     console.log(price)
 
-    var qty = document.getElementsByName("qty"+index)[0]; //utiliser l'index pour accéder a la quantite du produit cliqué
+    var qty = document.getElementById("qty"+index); //utiliser l'index pour accéder a la quantite du produit cliqué
     qty = qty.value //la variable qty va recevoir la quantite que l'utlisateur a choisi dans les options
     console.log(qty)
 
