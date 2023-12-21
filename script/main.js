@@ -135,20 +135,6 @@ btnConfirmer.onclick = function (){ // adc au button un function pour ouvrir le 
     modalPay.style.display = "none"
 }
 
-window.onclick = function(event) {  // montrer quand l'utilisateur click on the screen
-    console.log(event.target) // target pour voir ou l'utilisateur a clique
-    if (event.target == modalPay) {
-        modalPay.style.display = "none"; // si il a cliqie dehors le modal il va fermer 
-    }
-
-    if (event.target == modalPay2) {  
-        modalPay2.style.display = "none";
-    }
-    if (event.target == modalFinal) {  
-        modalFinal.style.display = "none";
-    }
-}
-
 var form = document.getElementById("form-payment");
 
 form.addEventListener("submit", (event)=>{ //appeler la function quand il clique sur le button confirm
@@ -282,6 +268,20 @@ btnClear.onclick = function(){
 
 }
 
+window.onclick = function(event) {  // montrer quand l'utilisateur click on the screen
+    console.log(event.target) // target pour voir ou l'utilisateur a clique
+    if (event.target == modalPay) {
+        modalPay.style.display = "none"; // si il a cliqie dehors le modal il va fermer 
+    }
+
+    if (event.target == modalPay2) {  
+        modalPay2.style.display = "none";
+    }
+    if (event.target == modalFinal) {  
+        modalFinal.style.display = "none";
+        form.submit();
+    }
+}
 
 
 
